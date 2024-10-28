@@ -17,40 +17,40 @@ public class BookSorterTest {
     @Test
     public void testSortByTitle() {
         List<Book> books = new ArrayList<>(Arrays.asList(
-                new Book("Java Programming", "John Doe", 2020, 29.99),
-                new Book("Python Programming", "Jane Doe", 2019, 39.99),
-                new Book("C++ Programming", "Jim Doe", 2021, 19.99)
+                new Book("Jerry Tom", "John Donny", 2020, 29.99),
+                new Book("Python Attack", "Pitter Pap", 2019, 39.99),
+                new Book("Canceled Train", "Carrot Kate", 2021, 19.99)
         ));
 
         List<Book> sortedBooks = BookSorter.sortByTitle(books);
 
-        assertEquals("C++ Programming", sortedBooks.get(0).getTitle());
-        assertEquals("Java Programming", sortedBooks.get(1).getTitle());
-        assertEquals("Python Programming", sortedBooks.get(2).getTitle());
+        assertEquals("Canceled Train", sortedBooks.get(0).getTitle());
+        assertEquals("Jerry Tom", sortedBooks.get(1).getTitle());
+        assertEquals("Python Attack", sortedBooks.get(2).getTitle());
     }
 
 
     @Test
     public void testSortByAuthor() {
         List<Book> books = new ArrayList<>(Arrays.asList(
-                new Book("Java Programming", "John Doe", 2020, 29.99),
-                new Book("Python Programming", "Jane Doe", 2019, 39.99),
-                new Book("C++ Programming", "Jim Doe", 2021, 19.99)
+                new Book("Jerry Tom", "John Donny", 2020, 29.99),
+                new Book("Python Attack", "Pitter Pap", 2019, 39.99),
+                new Book("Canceled Train", "Carrot Kate", 2021, 19.99)
         ));
 
         List<Book> sortedBooks = BookSorter.sortByAuthor(books);
 
-        assertEquals("Jane Doe", sortedBooks.get(0).getAuthor());
-        assertEquals("Jim Doe", sortedBooks.get(1).getAuthor());
-        assertEquals("John Doe", sortedBooks.get(2).getAuthor());
+        assertEquals("Carrot Kate", sortedBooks.get(0).getAuthor());
+        assertEquals("John Donny", sortedBooks.get(1).getAuthor());
+        assertEquals("Pitter Pap", sortedBooks.get(2).getAuthor());
     }
 
     @Test
     public void testSortByYear() {
         List<Book> books = new ArrayList<>(Arrays.asList(
-                new Book("Java Programming", "John Doe", 2020, 29.99),
-                new Book("Python Programming", "Jane Doe", 2019, 39.99),
-                new Book("C++ Programming", "Jim Doe", 2021, 19.99)
+                new Book("Jerry Tom", "John Donny", 2020, 29.99),
+                new Book("Python Attack", "Pitter Pap", 2019, 39.99),
+                new Book("Canceled Train", "Carrot Kate", 2021, 19.99)
         ));
 
 
@@ -64,9 +64,9 @@ public class BookSorterTest {
     @Test
     public void testSortByPrice() {
         List<Book> books = new ArrayList<>(Arrays.asList(
-                new Book("Java Programming", "John Doe", 2020, 29.99),
-                new Book("Python Programming", "Jane Doe", 2019, 39.99),
-                new Book("C++ Programming", "Jim Doe", 2021, 19.99)
+                new Book("Jerry Tom", "John Donny", 2020, 29.99),
+                new Book("Python Attack", "Pitter Pap", 2019, 39.99),
+                new Book("Canceled Train", "Carrot Kate", 2021, 19.99)
         ));
 
         List<Book> sortedBooks = BookSorter.sortByPrice(books);
@@ -86,7 +86,7 @@ public class BookSorterTest {
     @Test
     public void testSingleBook() {
         List<Book> books = new ArrayList<>(Arrays.asList(
-                new Book("Java Programming", "John Doe", 2020, 29.99)
+                new Book("Jerry Tom", "John Donny", 2020, 29.99)
         ));
         List<Book> sortedBooks = BookSorter.sortByTitle(books);
         assertEquals(books, sortedBooks);
